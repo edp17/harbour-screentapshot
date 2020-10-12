@@ -131,6 +131,7 @@ void ViewHelper::showOverlay()
     overlayView->create();
     QPlatformNativeInterface *native = QGuiApplication::platformNativeInterface();
     native->setWindowProperty(overlayView->handle(), QLatin1String("CATEGORY"), "notification");
+    native->setWindowProperty(overlayView->handle(), QLatin1String("BACKGROUND_VISIBLE"), true);
     setDefaultRegion();
     overlayView->show();
 }
